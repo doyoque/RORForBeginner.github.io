@@ -1,0 +1,1182 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>CRUD Operations - RoR for absolutely beginners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#rails-resources" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="RoR for absolutely beginners" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                RoR for absolutely beginners
+              </span>
+              <span class="md-header-nav__topic">
+                CRUD Operations
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="RoR for absolutely beginners" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    RoR for absolutely beginners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../gettingstarted/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CRUD Operations
+      </label>
+    
+    <a href="./" title="CRUD Operations" class="md-nav__link md-nav__link--active">
+      CRUD Operations
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rails-resources" title="Rails Resources" class="md-nav__link">
+    Rails Resources
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-post" title="New Post" class="md-nav__link">
+    New Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-postcontroller" title="Create the PostController" class="md-nav__link">
+    Create the PostController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-new-method" title="Define new method" class="md-nav__link">
+    Define new method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-form" title="Create new form" class="md-nav__link">
+    Create new form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-create-method" title="Define create method" class="md-nav__link">
+    Define create method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-for-post" title="Model for post" class="md-nav__link">
+    Model for post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-migration" title="Run the migration" class="md-nav__link">
+    Run the migration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-data-in-the-controller" title="Saving data in the controller" class="md-nav__link">
+    Saving data in the controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-the-paramters" title="Secure the paramters" class="md-nav__link">
+    Secure the paramters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-post" title="Show Post" class="md-nav__link">
+    Show Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-show-method" title="Define show method" class="md-nav__link">
+    Define show method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-show-file" title="Create show file" class="md-nav__link">
+    Create show file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-post" title="List All Post" class="md-nav__link">
+    List All Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-link" title="Add link" class="md-nav__link">
+    Add link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-a-post" title="Update a Post" class="md-nav__link">
+    Update a Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-edit-method" title="Define edit method" class="md-nav__link">
+    Define edit method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-edit-file" title="Create edit file" class="md-nav__link">
+    Create edit file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-update-method" title="Define update method" class="md-nav__link">
+    Define update method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-post" title="Delete Post" class="md-nav__link">
+    Delete Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-delete-and-add-action" title="Define delete and add action" class="md-nav__link">
+    Define delete and add action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../validation/" title="Validation" class="md-nav__link">
+      Validation
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rails-resources" title="Rails Resources" class="md-nav__link">
+    Rails Resources
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-post" title="New Post" class="md-nav__link">
+    New Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-postcontroller" title="Create the PostController" class="md-nav__link">
+    Create the PostController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-new-method" title="Define new method" class="md-nav__link">
+    Define new method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-form" title="Create new form" class="md-nav__link">
+    Create new form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-create-method" title="Define create method" class="md-nav__link">
+    Define create method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-for-post" title="Model for post" class="md-nav__link">
+    Model for post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-migration" title="Run the migration" class="md-nav__link">
+    Run the migration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-data-in-the-controller" title="Saving data in the controller" class="md-nav__link">
+    Saving data in the controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-the-paramters" title="Secure the paramters" class="md-nav__link">
+    Secure the paramters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-post" title="Show Post" class="md-nav__link">
+    Show Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-show-method" title="Define show method" class="md-nav__link">
+    Define show method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-show-file" title="Create show file" class="md-nav__link">
+    Create show file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-post" title="List All Post" class="md-nav__link">
+    List All Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-link" title="Add link" class="md-nav__link">
+    Add link
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-a-post" title="Update a Post" class="md-nav__link">
+    Update a Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-edit-method" title="Define edit method" class="md-nav__link">
+    Define edit method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-edit-file" title="Create edit file" class="md-nav__link">
+    Create edit file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-update-method" title="Define update method" class="md-nav__link">
+    Define update method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-post" title="Delete Post" class="md-nav__link">
+    Delete Post
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-delete-and-add-action" title="Define delete and add action" class="md-nav__link">
+    Define delete and add action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>CRUD Operations</h1>
+                
+                <h2 id="rails-resources">Rails Resources</h2>
+<p>In your application, you will create a new <em>resource</em> for doing the operational of CRUD (Create, Read, Update, and Delete). A resource is the term used for a collection of similiar objects such as articles, people or animals.</p>
+<p>Rails provides a <em>resources</em> method which can be used to declare a standard <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> resource. Now you need to add the <em>posts resource</em> to the <code>config/routes.rb</code> as below:</p>
+<pre><code class="ruby">Rails.application.routes.draw do
+  get 'welcome/index'
+
+  resources :posts
+
+  root 'welcome#index'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
+
+</code></pre>
+
+<p>If you run <code>bin/rails routes</code>, you'll see that it has defined routes for all the standard RESTful actions.</p>
+<pre><code>$ bin/rails routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+            welcome_index GET    /welcome/index(.:format)                                                                 welcome#index
+                    posts GET    /posts(.:format)                                                                         posts#index
+                          POST   /posts(.:format)                                                                         posts#create
+                 new_post GET    /posts/new(.:format)                                                                     posts#new
+                edit_post GET    /posts/:id/edit(.:format)                                                                posts#edit
+                     post GET    /posts/:id(.:format)                                                                     posts#show
+                          PATCH  /posts/:id(.:format)                                                                     posts#update
+                          PUT    /posts/:id(.:format)                                                                     posts#update
+                          DELETE /posts/:id(.:format)                                                                     posts#destroy
+                     root GET    /                                                                                        welcome#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+</code></pre>
+
+<p>Next you will add the ability to create new posts in your application and be able to view them.</p>
+<h3 id="new-post">New Post</h3>
+<p>As you can see in the rails <code>bin/rails routes</code> log, you can access <code>http://0.0.0.0:3000/posts/new</code> directly on browser. Go ahead and check that. Then you will get the error like this.</p>
+<p><img alt="PostsController" src="../img/newPost.png" /></p>
+<p>The error occurs because the route need to have a controller defined in order to serve the request. Let's generate new controller called <code>PostsController</code> to solve the error.</p>
+<h4 id="create-the-postcontroller">Create the PostController</h4>
+<p>To generate the controller, simply do a command as below.</p>
+<pre><code>$ bin/rails genereate controller Posts
+</code></pre>
+
+<p>Now open the Posts controller at <code>app/controllers/posts_controller.rb</code>, you'll see a empty controller.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+end
+</code></pre>
+
+<p>The controller is created. Go refresh the <code>http://0.0.0.0:3000/posts/new</code> URL and you will get the error again.</p>
+<p><img alt="NewNotFound" src="../img/UnknownAction.png" /></p>
+<p>This error indicates that Rails cannot find the "new" action. What is "new" action mean?. In Rails you just generate a controller that named <code>PostsController</code>. And Ruby is <a href="https://en.wikipedia.org/wiki/Object-oriented_programming"><em>Object Oriented Programming</em></a> Which mean you'll code with OOP concept like class, method, and many "Object Oriented" concept. And the error that you saw before mean Rails cannot find the 'new' action or you can say 'method' in the <code>PostsController</code> class.</p>
+<h4 id="define-new-method">Define new method</h4>
+<p>For the first try, let's create a new method called 'new' inside the <code>posts_controller.rb</code> class.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+  def new
+  end
+end
+</code></pre>
+
+<p>Refresh the page and you'll get the error again.</p>
+<p><img alt="ActionController" src="../img/ActionController.png" /></p>
+<p>You're get alot of error. Let's go through and understand what each part of it means.</p>
+<p>The first part identifies which templates is missing. In this case, it's the <code>posts/new</code> templates. Rails will first look for this template. If not found, then it will attempt to load a template called <code>application/new</code> because the <code>PostsController</code> is inherites from <code>ApplicationController</code>.</p>
+<p>The next part of the message contains request.formats which specifies the format of template to be served in response. It is set to <code>text/html</code> as we requested this page via browser, so Rails is looking for an HTML template.</p>
+<h4 id="create-new-form">Create new form</h4>
+<p>Let's create a file <code>new.html.erb</code> views for <code>PostsController</code> at <code>app/views/posts</code>, And write this content in it.</p>
+<pre><code class="erb">&lt;h1&gt;New Posts&lt;/h1&gt;
+
+&lt;%= form_with scope: :article, local: true do |form| %&gt;
+  &lt;p&gt;
+    &lt;%= form.label :title %&gt;&lt;br&gt;
+    &lt;%= form.text_field :title %&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;%= form.label :text %&gt;&lt;br&gt;
+    &lt;%= form.text_area :text %&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;%= form.submit %&gt;
+  &lt;/p&gt;
+&lt;% end %&gt;
+</code></pre>
+
+<p>As you can see, you will use a <em>form builder</em>. The primary form builder for Rails is provided by a helper method <code>form_with</code>. If you refresh the page now, you'll see the form is displaying sucessfuly. There's the one problem with this form though. If you inspect the HTML that is generated, by viewing the source of the page, you will see that the <code>action</code> attribute for the form is pointing at <code>/posts/new</code>. This is a problem because this routes goes to the very page that you're on right at the moment, and that route should only be used to display the form for a new post.</p>
+<p>The form needs to use different URL in order to go somewhere else. This can be done with <code>:url</code> option of <code>form_with</code>. Edit the <code>form_with</code> line inside <code>app/views/posts/new.html.erb</code>.</p>
+<pre><code>&lt;%= form_with scope: :article, url: posts_path, local: true do |form| %&gt;
+</code></pre>
+
+<p>In this example, the <code>posts_path</code> helper is passed to the <code>:url</code> option. In this case, helper tells the Rails to point the form to the URI Pattern associated with the <code>posts</code> prefix. And the form will (by default) send a <code>POST</code> request to that routes. You can check the URL Pattern by running this command.</p>
+<pre><code>$ bin/rails routes
+</code></pre>
+
+<p>It will generated a list of the URI that same as <a href="#rails-resources">above</a>.</p>
+<p>After that go fill up the form and submit that. You'll get this error.</p>
+<p><img alt="UnknownCreate" src="../img/UnknownCreate.png" /></p>
+<p>The error is very meaningful as before. That mean Rails can't find <code>create</code> method at your <code>posts_controller.rb</code>.</p>
+<h4 id="define-create-method">Define create method</h4>
+<p>Same as before. Let's create a new method called <code>create</code> inside the <code>PostsController</code> class.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+
+  def create
+    render plain: params[:post].inspect
+  end
+
+end
+
+</code></pre>
+
+<p>The <code>render</code> method here is taking a very simple hash with a key of <code>:plain</code> and value of <code>params[:posts]</code>.inspect. The params method is the object which represents the parameters (or fields) coming in from the form. The params method returns an <code>ActionController::Parameters</code> object, which allows you to access the keys of the hash using either strings or symbols. In this situation, the only parameters that matter are the ones from the form.</p>
+<p>If you submit the form, you'll see something like this</p>
+<pre><code>&lt;ActionController::Parameters {&quot;title&quot;=&gt;&quot;asdf&quot;, &quot;text&quot;=&gt;&quot;asdfasd asdf asdf asdfafsdf&quot;} permitted: false&gt;
+</code></pre>
+
+<p>This action is now displaying the parameters for the article that are coming in from the form. But this is not really all that helpful.</p>
+<h4 id="model-for-post">Model for post</h4>
+<p>When you create a <code>create</code> action, this mean you create the data and store it to database. But this will never get done if you never created the Database, right?. So how to create the DB?. The good news is, Rails come with sqlite3 as the default DB. Simply run this command at your terminal and Rails will do the rest for us.</p>
+<pre><code>$ bin/rails generate model Post title:string text:text
+</code></pre>
+
+<p>What that command mean is we told Rails <code>Post</code> model, together with <em>title</em> attribute of type string, and a <em>text</em> attribute of type text.</p>
+<p>So far we talk about <code>model</code>, <code>view</code>, and <code>controller</code>. And that's make sense, it because Ruby On Rails is working with architectural pattern commonly known as <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a> Which is <code>model</code> is represents the data structure. It is the application's dynamic data structure, independent of the user interface. It directly manages the data, logic and rules of the application.</p>
+<p>Rails responded by creating a bunch of files. For now, we are only take a look in <code>app/models/post.rb</code> and <code>db/migrate/20180806092757_create_posts.rb</code></p>
+<h4 id="run-the-migration">Run the migration</h4>
+<p>Before run the migration, let's take a look at <code>db/migrate/20180806092757_create_posts.rb</code></p>
+<pre><code class="ruby">class CreatePosts &lt; ActiveRecord::Migration[5.2]
+  def change
+    create_table :posts do |t|
+      t.string :title
+      t.text :text
+
+      t.timestamps
+    end
+  end
+end
+
+</code></pre>
+
+<p>The above migration creates as a method named <code>change</code> which will be called when you run this migration. It will create table named <code>posts</code> with one string <code>title</code> column and a <code>text</code> column after you run the migration.</p>
+<p>Now run the migration command just like this.</p>
+<pre><code>$ bin/rails db:migrate
+</code></pre>
+
+<p>Rails will execute this migration command and tell you it created the Posts table.</p>
+<pre><code>== 20180806092757 CreatePosts: migrating ======================================
+-- create_table(:posts)                                                        
+   -&gt; 0.0031s                                                                  
+== 20180806092757 CreatePosts: migrated (0.0032s) =============================
+</code></pre>
+
+<h4 id="saving-data-in-the-controller">Saving data in the controller</h4>
+<p>Now the model is migrated. Let's edit the <code>posts_controller.rb</code>. We need to edit <code>create</code> method as below.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+
+  def create
+    @post = Post.new(params[:post])
+
+    @post.save
+    redirect_to @post
+  end
+
+end
+</code></pre>
+
+<p>Here's what's going on: In the first line we add the data in <code>Post</code> table with <code>.new()</code> function using the parameter from request that carry on with <code>params[:post]</code>. <code>@post</code> it's a instance variable and is available to all methods within the class. Then <code>@post.save</code> is responsible for saving the model in the database and after that we redirect the user to <code>show</code> action.</p>
+<p>Now let's try to add the new post by access <code>http://0.0.0.0:3000/posts/new</code> and fill up the form. Go submit the form and you will get error like this.</p>
+<p><img alt="ForbiddenError" src="../img/ForbiddenAttributesError.png" /></p>
+<h4 id="secure-the-paramters">Secure the paramters</h4>
+<p>Rails has several security features that help you write secure applications, and you're running into one of them now. This one is called strong parameters, which requires us to tell Rails exactly which parameters are allowed into our controller actions. If don't secure the paramters that come from submit request, It very dangerous because it might be contain extra filed with values that violated your application's integrity. They would be 'mass assigned' into your model and then into the database along with the good stuff - potentially breaking your application.</p>
+<p>We have to whitelist our controller parameters to prevent wrongful mass assigment. In this case, we want to both allow and require the <code>title</code> and <code>text</code> parameters for vaild of <code>create</code>.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+
+  def create
+    @post = Post.new(post_params)
+
+    @post.save
+    redirect_to @post
+  end
+
+  private
+    def post_params
+      params.require(:post).permit(:title,:text)
+    end
+
+end
+</code></pre>
+
+<p>This is often factored out into its own method so it can be reused by multiple actions in the same controller, for example <code>create</code> and <code>update</code>. The method is often made <code>private</code> to make sure it can't be called outside its intended context.</p>
+<h3 id="show-post">Show Post</h3>
+<p>If you try to submit the form, Rails will complain about not finding <code>show</code> action. And if you take a look the URL, it looks like <code>http://0.0.0.0:3000/posts/1</code> which mean after you submit the form it will navigate to <code>/posts/:id/</code> URI. </p>
+<h4 id="define-show-method">Define show method</h4>
+<p>Same as <a href="#new-post">new post</a> (but without model and migration), you need to create correspondent method and view to display the information. Let's create the <code>show</code> method first.</p>
+<pre><code class="ruby">  def show
+    @post = Post.find(params[:id])
+  end
+</code></pre>
+
+<p>Things to note. We use <code>Post.find</code> to find the article we're interested in, passing in <code>params[:id]</code> to get the <code>:id</code> parameter from the request. Then we'll use instance variable (prefixed with <code>@</code>) to hold a reference to post object and pass the instance to the view.</p>
+<h4 id="create-show-file">Create show file</h4>
+<p>Now, create file named <code>show.html.erb</code> in <code>app/views/posts/</code> with the following content</p>
+<pre><code>&lt;h1&gt;Show The Post&lt;/h1&gt;
+&lt;p&gt;
+  &lt;strong&gt;Title:&lt;/strong&gt;
+  &lt;%= @post.title %&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Text:&lt;/strong&gt;
+  &lt;%= @post.text %&gt;
+&lt;/p&gt;
+</code></pre>
+
+<p>And after you submit the form, You'll see the post has been sucessfuly to display.</p>
+<p><img alt="ShowPost" src="../img/ShowPost.png" /></p>
+<h3 id="list-all-post">List All Post</h3>
+<p>So far we just created <code>new</code> and <code>show</code>. But how does we see all these data in one page?. We need to list all our posts, so let's do that by creating <code>index</code> method in <code>posts_controller.rb</code>.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+
+  def index
+    @post = Post.all
+  end
+
+  #above 'new' method
+end
+</code></pre>
+
+<p>And create new file named <code>index</code> at <code>app/views/posts/index.html.erb</code>.</p>
+<pre><code>&lt;h1&gt;Listing Posts&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Title&lt;/th&gt;
+    &lt;th&gt;Text&lt;/th&gt;
+    &lt;th&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;% @post.each do |posts| %&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;%= posts.title %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= posts.text %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= link_to 'Show', post_path(posts) %&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;% end %&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>Then navigate browser to <code>http://0.0.0.0:3000/posts</code> You'll see all the post are listed in table with the link to show the post.</p>
+<p><img alt="ListPost" src="../img/ListPosts.png" /></p>
+<h4 id="add-link">Add link</h4>
+<p>But we missed a simple thing. We need to add a link to <code>/posts</code> view in the root of page. So when user navigate to <code>http://0.0.0.0:3000</code>, It will contain a link to <code>/posts</code>.</p>
+<p>Open <code>app/views/welcome/index.html.erb</code> and add the link.</p>
+<pre><code>&lt;h1&gt;Hello, world!!&lt;/h1&gt;
+&lt;%= link_to 'My Post', controller: 'posts' %&gt;
+</code></pre>
+
+<p>The <code>link_to</code> method is one of Rails built-in view helpers. It create hyperlink based on text to display and where to go.</p>
+<p>Next add another link called "New Post" in <code>app/viewws/posts/index.html.erb</code> placing it above the <code>&lt;table&gt;</code> tag.</p>
+<pre><code>&lt;%= link_to 'New Post', new_post_path %&gt;
+</code></pre>
+
+<p>Now give a link to back to <code>/posts</code> URL in <code>app/views/posts/new.html.erb</code> in the bottom of the code.</p>
+<pre><code>&lt;h1&gt;new Post&lt;/h1&gt;
+
+&lt;%= form_with scope: :post, url: posts_path, local: true do |f|%&gt;
+&lt;p&gt;
+  &lt;%= f.label :title %&gt;&lt;br&gt;
+  &lt;%= f.text_field :title %&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;%= f.label :text %&gt;&lt;br&gt;
+  &lt;%= f.text_area :text %&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;%= f.submit %&gt;
+&lt;/p&gt;
+&lt;% end %&gt;
+
+&lt;%= link_to 'Back', posts_path %&gt;
+</code></pre>
+
+<p>And finally add another link to go back to posts index in <code>app/views/posts/show.html.erb</code>.</p>
+<pre><code>&lt;h1&gt;Show The Post&lt;/h1&gt;
+&lt;p&gt;
+  &lt;strong&gt;Title:&lt;/strong&gt;
+  &lt;%= @post.title %&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Text:&lt;/strong&gt;
+  &lt;%= @post.text %&gt;
+&lt;/p&gt;
+
+&lt;%= link_to 'Back', posts_path %&gt;
+</code></pre>
+
+<h3 id="update-a-post">Update a Post</h3>
+<p>Great. We've covered "CR" in the CRUD. Now let's focus on "U" part.</p>
+<h4 id="define-edit-method">Define edit method</h4>
+<p>The first step is of course to add new method called <code>edit</code> in <code>PostsController</code>. We named it <code>edit</code> as the action that covered the URI pattern. Let's show the routes list again for reminder.</p>
+<pre><code>$ bin/rails routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+            welcome_index GET    /welcome/index(.:format)                                                                 welcome#index
+                    posts GET    /posts(.:format)                                                                         posts#index
+                          POST   /posts(.:format)                                                                         posts#create
+                 new_post GET    /posts/new(.:format)                                                                     posts#new
+                edit_post GET    /posts/:id/edit(.:format)                                                                posts#edit
+                     post GET    /posts/:id(.:format)                                                                     posts#show
+                          PATCH  /posts/:id(.:format)                                                                     posts#update
+                          PUT    /posts/:id(.:format)                                                                     posts#update
+                          DELETE /posts/:id(.:format)                                                                     posts#destroy
+                     root GET    /                                                                                        welcome#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+</code></pre>
+
+<p>You can see at <code>Controller#Action</code> column it must be <code>edit</code>. Let's create the action now.</p>
+<pre><code class="ruby">class PostsController &lt; ApplicationController
+  def edit
+    @posts = Post.find(params[:id])
+  end
+end
+</code></pre>
+
+<h4 id="create-edit-file">Create edit file</h4>
+<p>And create new file named <code>edit.html.erb</code> in <code>app/views/posts/</code> and make it look as follows:</p>
+<pre><code>&lt;h1&gt;Edit Post&lt;/h1&gt;
+
+&lt;%= form_with(model: @post, local: true) do |form| %&gt;
+
+  &lt;p&gt;
+    &lt;%= form.label :title %&gt;&lt;br&gt;
+    &lt;%= form.text_field :title %&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;%= form.label :text %&gt;&lt;br&gt;
+    &lt;%= form.text_area :text %&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;%= form.submit %&gt;
+  &lt;/p&gt;
+
+&lt;% end %&gt;
+
+&lt;%= link_to 'Back', articles_path %&gt;
+</code></pre>
+
+<p>The view contain a form similiar to the one we used to create new post. This time we point the form to the <code>update</code> action, which is not defined yet but will be very soon.</p>
+<p>Passing the article object to the method, will automagically create url for submitting the edited post form. This option tells Rails that we want this form to be submitted via the PATCH HTTP method which is the HTTP method you're expected to use to update resources according to the REST protocol.</p>
+<p>The arguments to <code>form_with</code> could be model objects, say, <code>model: @article</code> which would cause the helper to fill in the form with the fields of the object. Passing in a symbol <code>scope</code> (<code>scope: :article</code>) just creates the fields but without anything filled into them.</p>
+<p>And don't forget to add the <code>update</code> link in <code>show</code> and <code>index</code> page.</p>
+<pre><code>&lt;h1&gt;Show The Post&lt;/h1&gt;
+&lt;p&gt;
+  &lt;strong&gt;Title:&lt;/strong&gt;
+  &lt;%= @post.title %&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Text:&lt;/strong&gt;
+  &lt;%= @post.text %&gt;
+&lt;/p&gt;
+
+&lt;%= link_to 'Edit', edit_post_path(@post) %&gt; |
+&lt;%= link_to 'Back', posts_path %&gt;
+</code></pre>
+
+<p>for <code>index</code> you can add link after <code>show</code> link insert <code>&lt;td&gt;</code> tag.</p>
+<pre><code>&lt;td&gt;&lt;%= link_to 'Edit', edit_post_path(posts) %&gt;&lt;/td&gt;
+</code></pre>
+
+<h4 id="define-update-method">Define update method</h4>
+<p>After that you must create <code>update</code> method.</p>
+<pre><code class="ruby">  def update
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render 'edit'
+    end
+  end
+</code></pre>
+
+<p>The new method <code>update</code>, is used when you want to update a record that already exists and it accepts a hash containing the attributes that you want to update. As before, if there was an error updating the article we want to show the form back to user. If you noticed that, we reuse <code>post_params</code> method that we defined earlier for create action.</p>
+<p>After that you'll look your app like this.
+<img alt="EditedList" src="../img/ListPostEdited.png" /></p>
+<h3 id="delete-post">Delete Post</h3>
+<p>So far we just created "C", "R", and "U". The last is the "D" AKA Delete. Why we need to delete the post that already created?. Because CRUD is a basic practical method for web development. And the data sometime is growing much bigger than before so we need to delete some data that no longer used.</p>
+<h4 id="define-delete-and-add-action">Define delete and add action</h4>
+<p>Following the REST convention, the route for deleting posts as per output of <code>bin/rails routes</code> is</p>
+<pre><code>DELETE /posts/:id(.:format) posts#destroy
+</code></pre>
+
+<p>the <code>delete</code> routing method should be used for routes that destroy the resources. We use the <code>delete</code> method for destroying resources, and this route is mapped to the <code>destroy</code> action inside <code>app/controllers/posts_controller.rb</code>. Let's create it now at the top of private method.</p>
+<pre><code class="ruby">  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to @post
+  end
+</code></pre>
+
+<p>Now call <code>destroy</code> on Active Record objects when you want to delete them from the database. We dont need to add a view for this action since we're redirecting to the <code>index</code> action.</p>
+<p>Add 'Destroy' link to your <code>index</code> template. Add it wrapped wtith <code>&lt;td&gt;</code> tag and below the <code>edit</code> link.</p>
+<pre><code>&lt;h1&gt;Listing Posts&lt;/h1&gt;
+
+&lt;%= link_to 'New Post', new_post_path %&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Title&lt;/th&gt;
+    &lt;th&gt;Text&lt;/th&gt;
+    &lt;th&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;% @post.each do |posts| %&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;%= posts.title %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= posts.text %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= link_to 'Show', post_path(posts) %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= link_to 'Edit', edit_post_path(posts) %&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;%= link_to 'Destroy', post_path(posts),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;% end %&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>The <code>delete</code> link is little bit different. The <code>method: :delete</code> and <code>data: { confirm: 'Are you sure?' }</code> options are used as HTML5 attributes so, when the link is clicked, Rails will first show the confirm message to the user, and then submit the link with method <code>delete</code>.</p>
+<p>Good work. You finised the CRUD operation in this section.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../gettingstarted/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../validation/" title="Validation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Validation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.30f6b8b1.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

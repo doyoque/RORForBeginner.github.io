@@ -1,0 +1,666 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+    
+    
+      
+        <title>Getting started - RoR for absolutely beginners</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#ruby-on-rails" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="RoR for absolutely beginners" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                RoR for absolutely beginners
+              </span>
+              <span class="md-header-nav__topic">
+                Getting started
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="RoR for absolutely beginners" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    RoR for absolutely beginners
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting started
+      </label>
+    
+    <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
+      Getting started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-rails" title="Getting Started with Rails" class="md-nav__link">
+    Getting Started with Rails
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-rails-app" title="First rails app" class="md-nav__link">
+    First rails app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rails-working-directory" title="Rails working directory" class="md-nav__link">
+    Rails working directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-around-in-rails" title="Work around in Rails" class="md-nav__link">
+    Work around in Rails
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-world-on-rails" title=""Hello World" on Rails" class="md-nav__link">
+    "Hello World" on Rails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-application-home-page" title="Setting the application home page" class="md-nav__link">
+    Setting the application home page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../gettingup/" title="CRUD Operations" class="md-nav__link">
+      CRUD Operations
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../validation/" title="Validation" class="md-nav__link">
+      Validation
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-rails" title="Getting Started with Rails" class="md-nav__link">
+    Getting Started with Rails
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-rails-app" title="First rails app" class="md-nav__link">
+    First rails app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rails-working-directory" title="Rails working directory" class="md-nav__link">
+    Rails working directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-around-in-rails" title="Work around in Rails" class="md-nav__link">
+    Work around in Rails
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hello-world-on-rails" title=""Hello World" on Rails" class="md-nav__link">
+    "Hello World" on Rails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-application-home-page" title="Setting the application home page" class="md-nav__link">
+    Setting the application home page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ruby-on-rails">Ruby On Rails</h1>
+<h2 id="getting-started-with-rails">Getting Started with Rails</h2>
+<h3 id="first-rails-app">First rails app</h3>
+<p>So the Rails is installed but how do we get start with Rails?. Well just run <code>rails new my-project</code> at the terminal and Rails will generate the application files and folders for us. And don't forget you can named the application whatever you want like <code>rails new blog</code> but in this case we gonna name it "my-project".</p>
+<pre><code>$ rails new my-project
+</code></pre>
+
+<p>After that your app will created. Let's move to your app directory and look what Rails have done.</p>
+<pre><code>$ cd my-project
+$ ls -l
+drwxrwxr-x 10 root root 4096 Agu  4 13:21 app
+drwxr-xr-x  2 root root 4096 Agu  4 13:21 bin
+drwxrwxr-x  5 root root 4096 Agu  4 13:21 config
+-rw-rw-r--  1 root root  130 Agu  4 13:21 config.ru
+drwxrwxr-x  2 root root 4096 Agu  4 13:21 db
+-rw-rw-r--  1 root root 2205 Agu  4 13:21 Gemfile
+-rw-rw-r--  1 root root 5293 Agu  4 13:21 Gemfile.lock
+drwxrwxr-x  4 root root 4096 Agu  4 13:21 lib
+drwxrwxr-x  2 root root 4096 Agu  4 13:42 log
+-rw-rw-r--  1 root root   68 Agu  4 13:21 package.json
+drwxrwxr-x  2 root root 4096 Agu  4 13:21 public
+-rw-rw-r--  1 root root  227 Agu  4 13:21 Rakefile
+-rw-rw-r--  1 root root  374 Agu  4 13:21 README.md
+drwxrwxr-x  2 root root 4096 Agu  4 13:21 storage
+drwxrwxr-x  9 root root 4096 Agu  4 13:21 test
+drwxrwxr-x  6 root root 4096 Agu  4 13:42 tmp
+drwxrwxr-x  2 root root 4096 Agu  4 13:21 vendor
+</code></pre>
+
+<h3 id="rails-working-directory">Rails working directory</h3>
+<p>Let's take a look what the purpose of files and folders was created by Rails.</p>
+<table>
+<thead>
+<tr>
+<th>File/Folder</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App/</td>
+<td>Contains the controllers, models, views, helpers, mailers, channels, jobs and assets for your application. You'll focus on this folder for the remainder of this guide.</td>
+</tr>
+<tr>
+<td>bin/</td>
+<td>Contains the rails script that starts your app and can contain other scripts you use to setup, update, deploy or run your application.</td>
+</tr>
+<tr>
+<td>config/</td>
+<td>Configure your application's routes, database, and more.</td>
+</tr>
+<tr>
+<td>config.ru</td>
+<td>Rack configuration for Rack based servers used to start the application.</td>
+</tr>
+<tr>
+<td>db/</td>
+<td>Contains your current database schema, as well as the database migrations.</td>
+</tr>
+<tr>
+<td>Gemfile and Gemfile.lock</td>
+<td>These files allow you to specify what gem dependencies are needed for your Rails application. These files are used by the Bundler gem.</td>
+</tr>
+<tr>
+<td>lib/</td>
+<td>Extended modules for your application.</td>
+</tr>
+<tr>
+<td>log/</td>
+<td>Application log files.</td>
+</tr>
+<tr>
+<td>package.json</td>
+<td>This file allows you to specify what npm dependencies are needed for your Rails application. This file is used by Yarn.</td>
+</tr>
+<tr>
+<td>public/</td>
+<td>The only folder seen by the world as-is. Contains static files and compiled assets.</td>
+</tr>
+<tr>
+<td>Rakefile</td>
+<td>This file locates and loads tasks that can be run from the command line. The task definitions are defined throughout the components of Rails. Rather than changing Rakefile, you should add your own tasks by adding files to the lib/tasks directory of your application.</td>
+</tr>
+<tr>
+<td>README.md</td>
+<td>This is a brief instruction manual for your application. You should edit this file to tell others what your application does, how to set it up, and so on.</td>
+</tr>
+<tr>
+<td>test/</td>
+<td>Unit tests, fixtures, and other test apparatus.</td>
+</tr>
+<tr>
+<td>tmp/</td>
+<td>Temporary files (like cache and pid files).</td>
+</tr>
+<tr>
+<td>vendor/</td>
+<td>A place for all third-party code. In a typical Rails application this includes vendored gems.</td>
+</tr>
+<tr>
+<td>.gitignore</td>
+<td>This file tells git which files (or patterns) it should ignore.</td>
+</tr>
+<tr>
+<td>.ruby-version</td>
+<td>This file contains the default Ruby version.</td>
+</tr>
+</tbody>
+</table>
+<p>For now let's keep moving on by doing a basic "Hello world" in Rails.</p>
+<h3 id="work-around-in-rails">Work around in Rails</h3>
+<p>As you can see we list the file and folder in working directory with <code>ls -l</code> command. Let's try to running the application with <code>rails server</code> command.</p>
+<pre><code>$ rails server
+=&gt; Booting Puma
+=&gt; Rails 5.2.0 application starting in development 
+=&gt; Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.4.0-p0), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+</code></pre>
+
+<p>Open your browser and navigate to <code>http://0.0.0.0:3000</code>. You should see the Rails default page.</p>
+<p><img alt="Screenshot" src="../img/Screenshot.png" /></p>
+<p>Now your web app is ready. But Rails is running with single static page and a default image. Let's do a basic "hello world" in Rails app.</p>
+<h4 id="hello-world-on-rails">"Hello World" on Rails</h4>
+<p>To say "Hello world" with Rails you need to create at least a <em>controller</em> and a <em>view</em>.</p>
+<p>A controller's purpose is to receive specific requests for the application. <em>Routing</em> decides which controller receives which requests. And you can say a controller's is the place where application logic and algorithm is working. Often, there is more than one route to each controller, and different routes can be served by different <em>actions</em>. Each action's purpose is to collect information to provide it to a view.</p>
+<p>A view as you read is to display the information in a human readable format. The view should just display the information that come from controller. By default, view templates are written in eRuby (Embedded Ruby) which is processed by the request cycle in Rails before being sent to the user.</p>
+<p>To create a new controller, you will need to run the "controller" generator and tell it you want a controller called "welcome" with an action called "index".</p>
+<pre><code>bin/rails generate controller welcome index
+</code></pre>
+
+<p>And Rails will create several files and a route for you.</p>
+<pre><code>create  app/controllers/welcome_controller.rb
+ route  get 'welcome/index'
+invoke  erb
+create    app/views/welcome
+create    app/views/welcome/index.html.erb
+invoke  test_unit
+create    test/controllers/welcome_controller_test.rb
+invoke  helper
+create    app/helpers/welcome_helper.rb
+invoke    test_unit
+invoke  assets
+invoke    coffee
+create      app/assets/javascripts/welcome.coffee
+invoke    scss
+create      app/assets/stylesheets/welcome.scss
+</code></pre>
+
+<p>The controller is located at <code>app/controllers/welcome_controller.rb</code> and the view is located at <code>app/views/welcome/index.html.erb</code>.</p>
+<p>Open the <code>app/views/welcome/index.html.erb</code> file in your text editor. Delete all of the existing code and replace it with single line of "hello world" code.</p>
+<pre><code class="html">&lt;h1&gt;Hello, world!!&lt;/h1&gt;
+</code></pre>
+
+<h4 id="setting-the-application-home-page">Setting the application home page</h4>
+<p>Now that we made the controller and view. Next we need to tell Rails when we want "Hello world", to show up. In this case, we want it to show up when we navigate to the root URL of our site, <code>http://0.0.0.0:3000</code>. To do that, open the file <code>config/routes.rb</code> in your editor.</p>
+<pre><code class="ruby">Rails.application.routes.draw do
+  get 'welcome/index'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
+</code></pre>
+
+<p>This is your application's <em>routing</em> files. The routes file is hold entries in a special DSL <a href="https://en.wikipedia.org/wiki/Domain-specific_language">domain-specific language</a> that tells Rails how to connect incoming requests to controllers and actions. Now edit this file as below.</p>
+<pre><code class="ruby">Rails.application.routes.draw do
+  get 'welcome/index'
+
+  root 'welcome#index'
+end
+</code></pre>
+
+<p><code>root 'welcome#index'</code> tells Rails to map requests to the root of the application to the welcome controller's index action and <code>get 'welcome/index'</code> tells Rails to map requests to <code>http://0.0.0.0:3000/welcome/index</code> to the welcome controller's index action. This was created earlier when you ran the controller generator.</p>
+<p>Now refresh the page and you'll see the "hello world!!" message you put into <code>app/views/welcome/index.html.erb</code>.</p>
+<p><img alt="HelloWorld" src="../img/helloWorld.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../gettingup/" title="CRUD Operations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                CRUD Operations
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.30f6b8b1.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
