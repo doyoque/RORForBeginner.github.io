@@ -1,0 +1,13 @@
+site_name: RoR for absolutely beginners
+pages:
+  - Home: index.md
+  - Installation: installation.md
+  - Getting started: gettingstarted.md
+  - CRUD Operations: gettingup.md
+  - Validation: validation.md
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'red'
+    accent: 'indigo'
